@@ -1,0 +1,20 @@
+<h1>Bugs Index</h1>
+
+<table>
+<tr>
+  <th>Which End</th>
+  <th>Error Code</th>
+  <th>Component</th>
+  <th>Resolved?</th>
+  <th>Body</th>
+</tr>
+  <% @bugs.each do |bug| %>
+    <tr>
+      <td><%= bug.which_end %></td>
+      <td><%= bug.code %></td>
+      <td><%= bug.component %></td>
+      <td><%= bug.resolved %></td>
+      <td><%= bug.body %></td>
+    </tr>
+  <% end %>
+</table>
