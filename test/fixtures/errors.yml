@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: errors
+#
+#  id         :integer          not null, primary key
+#  component  :string
+#  code       :integer
+#  body       :string
+#  resolved   :boolean          default("false")
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  which_end  :string
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
