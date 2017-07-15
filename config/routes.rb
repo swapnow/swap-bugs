@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :errors, only: [:create, :update, :index]
+  namespace :api do
+    resources :errors, only: [:create, :update, :index]
+  end
 end

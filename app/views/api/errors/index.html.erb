@@ -1,4 +1,4 @@
-<h1>Bugs Index</h1>
+<h1>Errors Index</h1>
 
 <table>
 <tr>
@@ -8,13 +8,13 @@
   <th>Resolved?</th>
   <th>Body</th>
 </tr>
-  <% @bugs.each do |bug| %>
+  <% @errors.each do |error| %>
     <tr>
-      <td><%= bug.which_end %></td>
-      <td><%= bug.code %></td>
-      <td><%= bug.component %></td>
-      <td><%= bug.resolved %></td>
-      <td><%= bug.body %></td>
+      <td><%= error.which_end %></td>
+      <td><%= error.code %></td>
+      <td><%= error.component %></td>
+      <td><%= error.resolved %></td>
+      <td><%= error.body %></td>
     </tr>
   <% end %>
 </table>

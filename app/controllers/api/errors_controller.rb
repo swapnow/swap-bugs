@@ -1,15 +1,16 @@
 class Api::ErrorsController < ApplicationController
   def index
-
     # params['filters] = { which_end: 'frontend', code: 401 } as example.
     if params['filters']
-      @error.where(params[filters])
+      @errors = Error.where(params[filters]) || []
     else
-      @errors = Error.all
+      @errors = Error.all || []
     end
   end
 
   def create
+    # add check to ensure only swapnow.io can post
+    p request.base_url 
     @error = Error.new(error_params)
     @error.save
   end
